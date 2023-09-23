@@ -1,0 +1,18 @@
+name: Iosevka Forge
+on: [ workflow_dispatch ]
+jobs:
+  E:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
+      - run: copy ./private-build-plans.toml ./Iosevka/private-build-plans.toml
+      - run: npm install
+      - run: npm run build -- contents::iosevka
+      - run: npm run build -- super-ttc::iosevka
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./dist
