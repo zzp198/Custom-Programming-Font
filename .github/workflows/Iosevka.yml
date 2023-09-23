@@ -9,8 +9,8 @@ jobs:
         with:
           node-version: '14'
       - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
-      - run: cp -f ./private-build-plans.toml ./Iosevka-Customizer/private-build-plans.toml
-      - run: cd ./Iosevka-Customizer
+      - run: cp -f ./private-build-plans.toml ./Iosevka/private-build-plans.toml
+      - run: cd ./Iosevka
       - run: npm install
       - run: npm run build -- contents::iosevka
       - run: npm run build -- super-ttc::iosevka
