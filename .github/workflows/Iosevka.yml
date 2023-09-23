@@ -1,7 +1,7 @@
 name: Iosevka Forge
 on: [ workflow_dispatch ]
 jobs:
-  E:
+  Custom_Iosevka:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
