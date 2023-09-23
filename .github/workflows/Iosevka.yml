@@ -11,8 +11,8 @@ jobs:
       - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
       - run: copy ./private-build-plans.toml ./Iosevka/private-build-plans.toml
       - run: npm install
-      - run: npm run build -- contents::Iosevka
-      - run: npm run build -- super-ttc::Iosevka
+      - run: npm run build -- contents::iosevka
+      - run: npm run build -- super-ttc::iosevka
       - uses: actions/upload-artifact@v3
         with:
           path: ./dist
