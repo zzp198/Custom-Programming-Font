@@ -9,6 +9,7 @@ jobs:
         with:
           node-version: '14'
       - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
+      - run: ls
       - run: cp -f ./private-build-plans.toml ./Iosevka/private-build-plans.toml
       - run: cd ./Iosevka
       - run: npm install
