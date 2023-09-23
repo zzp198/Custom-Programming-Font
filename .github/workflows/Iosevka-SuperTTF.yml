@@ -1,0 +1,21 @@
+name: Iosevka SuperTTF
+on: [ workflow_dispatch ]
+jobs:
+  Custom_Iosevka:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
+      - run: ls
+      - run: cp ./private-build-plans.toml ./Iosevka/private-build-plans.toml
+      - run: cp ./ttfautohint.exe ./Iosevka/ttfautohint.exe
+      - run: npm install
+        working-directory: ./Iosevka
+      - run: npm run build -- super-ttc::iosevka
+        working-directory: ./Iosevka
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./Iosevka/dist
