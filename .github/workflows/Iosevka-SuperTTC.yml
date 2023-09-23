@@ -1,4 +1,4 @@
-name: Iosevka SuperTTF
+name: Iosevka SuperTTC
 on: [ workflow_dispatch ]
 jobs:
   Custom_Iosevka:
