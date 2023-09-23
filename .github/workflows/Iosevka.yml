@@ -10,8 +10,8 @@ jobs:
           node-version: '18'
       - run: git clone --depth 1 https://github.com/be5invis/Iosevka.git
       - run: ls
-      - run: cp -f ./private-build-plans.toml ./Iosevka/private-build-plans.toml
-      - run: cp -f ./ttfautohint.exe ./Iosevka/ttfautohint.exe
+      - run: cp ./private-build-plans.toml ./Iosevka/private-build-plans.toml
+      - run: cp ./ttfautohint.exe ./Iosevka/ttfautohint.exe
       - run: npm install
         working-directory: ./Iosevka
       - run: npm run build -- contents::iosevka
