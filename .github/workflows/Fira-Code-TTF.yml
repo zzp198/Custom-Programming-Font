@@ -12,7 +12,7 @@ jobs:
       - run: ls
       - run: ./script/bootstrap_linux.sh
         working-directory: ./FiraCode
-      - run: ./script/build.sh --features "cv"
+      - run: ./script/build.sh --features "cv10,cv14,ss08"
         working-directory: ./FiraCode
       - run: ls
         working-directory: ./FiraCode
