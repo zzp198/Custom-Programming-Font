@@ -1,3 +1,5 @@
+Jetbrain系如何添加字体: 拷贝字体文件到 [每个IDE安装目录]\jbr\lib\fonts\
+
 **Iosevka**
 
 1.不要fork,右上角Use this template创建你自己的仓库.
