@@ -2,12 +2,13 @@ name: Fira Code TTF
 on: [ workflow_dispatch ]
 jobs:
   Custom_Fira_Code:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: "3.8"
+      - run: sudo apt update -y & sudo apt upgrade -y
       - run: git clone https://github.com/tonsky/FiraCode.git
       - run: ls
       - run: ./script/bootstrap_linux.sh
