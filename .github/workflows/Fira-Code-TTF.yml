@@ -2,7 +2,7 @@ name: Fira Code TTF
 on: [ workflow_dispatch ]
 jobs:
   Custom_Fira_Code:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
