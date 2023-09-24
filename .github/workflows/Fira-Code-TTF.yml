@@ -1,0 +1,21 @@
+name: Fira Code TTF
+on: [ workflow_dispatch ]
+jobs:
+  Custom_Iosevka:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: git clone https://github.com/tonsky/FiraCode.git
+      - run: ls
+      - run: ./script/bootstrap_linux.sh
+        working-directory: ./FiraCode
+      - run: ./script/build.sh --features "cv"
+        working-directory: ./FiraCode
+      - run: ls
+        working-directory: ./FiraCode
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./FiraCode/distr
