@@ -1,3 +1,5 @@
+项目起因: 平常喜欢使用Fira Code Retina作为Jetbrain系的编程字体,整体都很不错,唯独觉得里面的"l"弯曲的太厉害,给我一种失衡的感觉.Fira Code和Iosevka本身都支持风格集,可以自定义字体的细节,奈何IDE不支持,只能通过预编译为成品字体的方式来使用.
+
 **Jetbrain系如何添加字体: 拷贝字体文件到 [每个IDE安装目录]\jbr\lib\fonts\\**
 
 **Iosevka**
