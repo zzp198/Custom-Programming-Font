@@ -14,10 +14,10 @@ jobs:
       - run: ls
       - run: ./script/bootstrap_linux.sh
         working-directory: ./FiraCode
-      - run: ./script/build.sh --features "cv10,cv14,ss08"
+      - run: ./script/build.sh -f "cv10,cv14,ss08,ss07"
         working-directory: ./FiraCode
       - run: ls
         working-directory: ./FiraCode
       - uses: actions/upload-artifact@v3
         with:
-          path: ./FiraCode/distr
+          path: ./FiraCode
