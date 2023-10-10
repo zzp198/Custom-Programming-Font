@@ -18,4 +18,4 @@ jobs:
         working-directory: ./FiraCode
       - uses: actions/upload-artifact@v3
         with:
-          path: ./FiraCode
+          path: ./FiraCode/distr
