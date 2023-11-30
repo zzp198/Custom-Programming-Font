@@ -5,16 +5,19 @@ serifs = "sans"
 no-cv-ss = true
 export-glyph-names = false
 
-[buildPlans.iosevka.variants]
-inherits = "ss05"
+  [buildPlans.iosevka.variants]
+  inherits = "ss05"
 
-[buildPlans.iosevka.variants.design]
-capital-w = "straight-flat-top-serifless"
-j = "flat-hook-serifed"
-l = "serifed-asymmetric"
-t = "flat-hook"
-w = "straight-flat-top-serifless"
-zero = "slashed"
-three = "flat-top"
-six = "open-contour"
-nine = "open-contour"
+    [buildPlans.iosevka.variants.design]
+    j = "serifed"
+    l = "serifed"
+
+[buildPlans.iosevka.widths.condensed]
+shape = 500
+menu = 3
+css = "condensed"
+
+[buildPlans.iosevka.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
